@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -16,7 +17,7 @@ public class Calculator extends JPanel implements MouseListener, KeyListener {
 	
 	private static final long serialVersionUID = 1L;
 
-	public final int WIDTH = 232, HEIGHT = 322;
+	public final int WIDTH = 232, HEIGHT = 310;
 	
 	public static String resultText = "0";
 	public static String currentOp = "";
@@ -37,11 +38,10 @@ public class Calculator extends JPanel implements MouseListener, KeyListener {
 	public Calculator() {
 		JFrame frame = new JFrame();
 		frame.setTitle("電卓");
-		frame.setSize(WIDTH, HEIGHT);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
-		frame.setLocationRelativeTo(null);
 		
+		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		frame.getContentPane().add(this);
 		
 		this.addMouseListener(this);
@@ -71,6 +71,7 @@ public class Calculator extends JPanel implements MouseListener, KeyListener {
 		period = new Rectangle(116, 254, 57, 48);
 		equal = new Rectangle(174, 254, 57, 48);
 		
+		frame.pack();
 		frame.setVisible(true);
 	}
 	
