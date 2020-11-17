@@ -41,7 +41,7 @@ public class Calculator implements MouseListener, KeyListener {
 		frame.getContentPane().add(dp);
 		
 		dp.addMouseListener(this);
-		frame.addKeyListener(this);
+		dp.addKeyListener(this);
 		
 		clear = new Rectangle(0, 58, 57, 48);
 		plusminus = new Rectangle(58, 58, 57, 48);

@@ -9,6 +9,10 @@ public class DrawPanel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	
+	public DrawPanel() {
+		this.setFocusable(true);
+	}
+	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D)g;
